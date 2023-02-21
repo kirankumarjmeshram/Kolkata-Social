@@ -1,0 +1,9 @@
+.start{
+    display: flex; 
+    justify-content: center;
+   }
+.header{
+    padding: auto;color:black;   
+    font-style: oblique;
+    background-image: url();
+   }
