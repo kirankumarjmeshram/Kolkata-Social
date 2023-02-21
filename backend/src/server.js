@@ -2,24 +2,9 @@
 const app = require("./index");
 const connect = require("./configs/db");
 
-
-
 app.get('/', (req, res) => {
-    res.send(`
-    
-    `)
+    res.send(`<h1 style="color:blue; font-size:100px;" >Hello World</h1>`);
   })
-    
-
-// app.listen(1234,async(res,rec)=>{
-//     //await connect();
-//     console.log("Listening on port 1234")
-// })
-
-
-
-// //__________________________________
-
 
 const port = process.env.PORT || 5000;
 

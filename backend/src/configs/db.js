@@ -1,5 +1,6 @@
 // mongodb://localhost:27017/ksocial1
 const mongoose = require("mongoose");
+mongoose.set('strictQuery', true);// It skips mongose DeprecationWarning
 //const dotenv = require("dotenv");
 //dotenv.config();
 
