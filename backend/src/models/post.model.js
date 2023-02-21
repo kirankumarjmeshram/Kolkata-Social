@@ -3,28 +3,12 @@ const Profile = require('./Profile');
 
 const postSchema = new mongoose.Schema(
   {
-    createdAt: {
-      type: Date,
-      default: Date.now,
-    },
-    profile: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Profile',
-    },
-    caption: {
-      type: String,
-      trim: true,
-    },
-    location: {
-      type: String,
-    },
+    createdAt: {type: Date, default: Date.now,},
+    profile: {type: mongoose.Schema.Types.ObjectId, ref: 'Profile',},
+    caption: {type: String, trim: true,},
+    location: {type: String,},
     hashtag: Array,
-    likes: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Profile',
-      },
-    ],
+    likes: [{ type: mongoose.Schema.Types.ObjectId,ref: 'Profile',},],
     image: Array,
     comment: {
       type: mongoose.Schema.Types.ObjectId,
