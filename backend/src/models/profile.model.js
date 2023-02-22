@@ -5,9 +5,9 @@ const validator = require('validator');
 const profileSchema = new mongoose.Schema(
   {
     user: {type: mongoose.Schema.Types.ObjectId,ref: 'User',},
-    bio: {type: String,trim: true,},
+    // bio: {type: String,trim: true,},
     accountType: {type: String, enum: ['public', 'private'], default: 'public',},
-    website: {type: String,},
+    // website: {type: String,},
     name: {type: String,},
     username: {type: String, required: [true, 'username is required'],unique: true,},
     gender: {type: String,select: false,},
