@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+   Signin
+</title>
+<link rel="stylesheet" href="Logging.css">
+</head>
+
+<body>
+
+
+    <div class="start">
+        <h1 class="header">Kolkata Social</h1>
+         </div>
+
+
+
+    <div style = " display: flex;">
+        
+        <div style = "margin : auto">
+            
+
+    
+
+   
+    <div style = "border : 1px solid rgb(126, 53, 53); height : 200px; padding : 50px">
+    <h1 style = "text-align: center;color : red; margin-top: -30px;">Signin</h1></br></br> </br></br> </br>
+
+    <form onSubmit = signin(event) id = "myform" style = "text-align: center">
+
+<div style="margin-top: -50px;">
+<label style = "text-align: center;color : red;">Email:</label>
+ <input type = "email" id = "email" placeholder = "Email"> </br> </br>
+
+
+ <label style = "text-align: center;color : red">Password:</label>
+ <input type = "password" id = "password" placeholder = "Password"> </br> </br>
+
+</div>
+
+<input type = "submit"/>
+    </div>
+</form>
+
+
+<script>
+function signin(e) {
+    e.preventDefault();
+
+
+    let myname = document.getElementById("myform");
+
+   
+    
+    let email = myname.email.value;
+    let password = myname.password.value;
+
+    let all = JSON.parse(localStorage.getItem("user"));
+    
+  all.forEach(function(user)  {
+      if (email == user.email && password == user.password) {
+
+//window.location.href = "practo.html" 
+  alert ('logged in')  
+
+      }
+      
+  });
+}  
+
+ 
+
+
+</script>
+</body>
+
+</body>
