@@ -14,7 +14,7 @@
 // });
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const Notification = require('./models/Notification');
+// const Notification = require('./models/Notification');
 
 dotenv.config({
   path: '.env',
