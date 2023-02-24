@@ -7,14 +7,10 @@ const cors = require('cors');
 
 const app = express();
 
-const cloudinary = require('./utils/cloudinary');
-
 const userRoute = require('./routes/user');
 const profileRoute = require('./routes/profile');
 const postRoute = require('./routes/Post');
-const bookmarkRoute = require('./routes/bookmark');
 const commentRoute = require('./routes/comment');
-const groupRoute = require('./routes/group');
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorHandler/error');
