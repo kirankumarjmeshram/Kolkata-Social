@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
 const bcrypt = require('bcryptjs');
-const profile = require('./Profile');
+const profile = require('./profile.model');
 
 const userSchema = new mongoose.Schema(
   {
@@ -40,7 +40,7 @@ userSchema.methods.comparePassword = async function (dbPassword, userPassword) {
   return await bcrypt.compare(dbPassword, userPassword);
 };
 
-UserSchema.post('save', async function (doc) {
+userSchema.post('save', async function (doc) {
   await Profile.create({ user: doc._id });
 });
 

@@ -1,13 +1,13 @@
-const User = require('../models/User');
+const User = require('../models/user.model');
 const catchAsync = require('../utils/catchAsync');
 const { validationResult } = require('express-validator');
 const AppError = require('../utils/appError');
 const jwt = require('jsonwebtoken');
 const sendEmail = require('../utils/sendMail');
 const { promisify } = require('util');
-const Profile = require('../models/Profile');
-const Otp = require('../models/Otp');
-const Notification = require('../models/Notification');
+const Profile = require('../models/profile.model');
+//const Otp = require('../models/Otp');
+// const Notification = require('../models/Notification');
 
 //^middlewares
 exports.signUpValidations = (req, res, next) => {

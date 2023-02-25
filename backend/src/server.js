@@ -14,7 +14,6 @@
 // });
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-// const Notification = require('./models/Notification');
 
 dotenv.config({
   path: '.env',
@@ -48,23 +47,12 @@ io.on('connection', (socket) => {
     console.log(userId, 'auth');
     socket.join(userId);
   });
-  // socket.on('join room', (groupId) => {
-  //   socket.join(groupId);
-  // });
-  // socket.on('message', ({ groupId, message }) => {
-  //   socket.broadcast.to(groupId).emit('message', { groupId, message });
-  // });
+
   socket.on('seen', (groupId) => {
     socket.broadcast.to(groupId).emit('seen', groupId);
   });
   socket.on('render', (groupId) => {
     socket.broadcast.to(groupId).emit('render', groupId);
   });
-  // socket.on('notification', async (msg) => {
-  //   const notification = await Notification.create(msg);
-  //   socket.broadcast.to(msg.to).emit('notification');
-  // });
-  // socket.on('disconnect', () => {
-  //   console.log('disconnected');
-  // });
+
 });

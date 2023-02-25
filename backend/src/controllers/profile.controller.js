@@ -1,12 +1,12 @@
-const Profile = require('../models/Profile');
+const Profile = require('../models/profile.model');
 const catchAsync = require('../utils/catchAsync');
 const { validationResult } = require('express-validator');
 const AppError = require('../utils/appError');
 const fileUpload = require('../utils/fileUpload');
 const cloudinary = require('cloudinary').v2;
-const Post = require('../models/Post');
+const Post = require('../models/post.model');
 const Message = require('../models/Messages');
-const Notification = require('../models/Notification');
+// const Notification = require('../models/Notification');
 
 exports.profileValidations = (req, res, next) => {
   if (req.body.accountType)

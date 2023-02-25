@@ -10,7 +10,7 @@ const {
   getPostById,
   deletePost,
   likePost,
-} = require('../controllers/postController');
+} = require('../controllers/post.controller');
 const upload = require('../utils/multer');
 
 router

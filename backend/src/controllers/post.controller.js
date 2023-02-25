@@ -1,11 +1,11 @@
-const Post = require('../models/Post');
+const Post = require('../models/post.model');
 const getProfileId = require('../utils/profile');
 const cloudinary = require('cloudinary').v2;
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 const fileUpload = require('../utils/fileUpload');
-const Comment = require('../models/Comment');
-const Notification = require('../models/Notification');
+// const Comment = require('../models/Comment');
+// const Notification = require('../models/Notification');
 
 const deleteImageCloudinary = async (id) => {
   const { image } = await Post.findById(id);
