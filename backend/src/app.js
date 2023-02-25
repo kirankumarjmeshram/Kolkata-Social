@@ -12,7 +12,7 @@ const postRoute = require('./routes/Post');
 const commentRoute = require('./routes/comment');
 
 const AppError = require('./utils/appError');
-const globalErrorHandler = require('./controllers/errorHandler/error');
+// const globalErrorHandler = require('./controllers/errorHandler/error');
 
 
 app.use(express.json());
@@ -24,7 +24,7 @@ app.use(
     origin: process.env.CLIENT,
   })
 );
-cloudinary();
+// cloudinary();
 
 //~routes
 app.use('/api/v1/users', userRoute);
@@ -37,6 +37,6 @@ app.all('*', (req, res, next) => {
 });
 
 //^global error handler
-app.use(globalErrorHandler);
+// app.use(globalErrorHandler);
 
 module.exports = app;
